@@ -33,7 +33,7 @@ RUN ln -s /usr/bin/php7 /usr/bin/php && \
     mkdir -p /run/nginx
 
 COPY ./init.sh /
-
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 RUN chmod +x /init.sh
 
 EXPOSE 80
