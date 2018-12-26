@@ -32,4 +32,10 @@ RUN ln -s /usr/bin/php7 /usr/bin/php && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     mkdir -p /run/nginx
 
+COPY ./init.sh /
+
+RUN chmod +x /init.sh
+
 EXPOSE 80
+
+ENTRYPOINT [ "/init.sh" ]
