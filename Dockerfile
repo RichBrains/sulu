@@ -9,7 +9,8 @@ RUN apk add --no-cache --virtual .ext-deps \
         nodejs-npm \
         nginx \
         git \
-        inkscape
+        inkscape \
+        varnish
 
 # imagick
 RUN apk add --update --no-cache autoconf g++ imagemagick-dev libtool make pcre-dev \
